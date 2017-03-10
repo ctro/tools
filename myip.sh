@@ -1,1 +1,0 @@
-sudo curl ifconfig.co
