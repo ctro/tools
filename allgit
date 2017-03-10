@@ -1,0 +1,9 @@
+#!/usr/bin/ruby
+
+dirs = Dir.glob('/home/clint/dev').select {|f| File.directory? f}
+
+dirs.each do |repo|
+  puts "******* #{repo} *******"
+  puts `cd /home/clint/#{repo} && git status`
+  puts "\n"
+end

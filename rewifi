@@ -1,2 +1,2 @@
 #!/bin/bash -eux
-sudo network-manager restart
+sudo service network-manager restart
