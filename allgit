@@ -3,12 +3,10 @@
 dirs = Dir.glob('/home/clint/dev/*').select {|f| File.directory? f}
 
 report = ""
-
 dirs.each do |repo|
-  report += "\e[0;35m ⚛⚛⚛⚛⚛⚛⚛ #{repo} ⚛⚛⚛⚛⚛⚛⚛\e[0m\n" 
+  report += "\e[0;36m❇❇❇❇❇❇❇ #{repo} ❇❇❇❇❇❇❇\e[0m\n" 
   report += `cd #{repo} && git status`
   report += "\n"
 end
 
 puts report
-#%x(echo '#{report}' | less)
